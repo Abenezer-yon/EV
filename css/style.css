@@ -1,6 +1,50 @@
+body{
+  margin-left: 100px;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #5fdaffbc, #7bc3fe); /* Diagonal gradient background */
+}
+.shaped-background {
+  position: relative;
+  height: 100%;
+}
+.shaped-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1), rgba(255,255,255,0.6));
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  z-index: -1;
+}
+.logo img{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-left: 20px;
+    max-width: 200px; /* Adjust the size as needed */
+    animation: blink 1s infinite; /* Apply the blinking animation */
+}
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+}
+  }
+.future{
+  color: cornflowerblue;
+  text-shadow: deepskyblue;
+  text-decoration:;
+}
 .png-img img{
-    height: 110%;
-    position: absolute;
+    width: 100%;
+    height: auto;
     top: 0;
     right: 0;
     z-index: -10;
@@ -8,6 +52,7 @@
   }
   .col{
     display: block;
+
   }
   .row{
     margin-top:100px;
