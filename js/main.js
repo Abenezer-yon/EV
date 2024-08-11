@@ -31,7 +31,7 @@ function credentialChecker(result){
         var InputUsername = document.getElementById("tempUsername").value;
         var InputPassword = document.getElementById("tempPassword").value;
         
-        if (username === InputUsername || password === InputPassword) {
+        if (username === InputUsername && password === InputPassword) {
             Swal.fire("Logged In", "", "success");
         }else {
             Swal.fire({
