@@ -26,10 +26,10 @@ body{
 }
 .navbar-brand{
   font-family: "Righteous", sans-serif;
+  color: #064d9e;
   background: linear-gradient(90deg, #064d9e, #2a60a7);
   font-size: 30px;
   -webkit-background-clip: text;
-  color: transparent;
 }
 
 .nav-link {
@@ -95,18 +95,20 @@ body{
   margin: auto;
   justify-content: center;
   border-radius: 100px;
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
-.carouselCaptions{
+/* .carouselCaptions{
   border-radius: 50px;
   background-color: #f8f9fa;
   border: 1px solid #ddd;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
 
-  }
+  } */
   }
   .carousel-caption{
     border-radius: 30px;
     background-color:lightskyblue;
+  }
+  .carousel-inner{
+    border-radius: 50px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+
   }
