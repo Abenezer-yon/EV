@@ -93,44 +93,56 @@
             </button>
           </div>
         
-        <div class="row   row-cols-1 row-cols-md-5 g-5">
-            <div class="col">
-                <div class="card">
-                    <img src="images/ev1.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title fs-1 fst-italic fw-bold">CHARGER</h5>
-                    <p class="card-text">Charger installment paragraph</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="images/ev3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title fs-1 fst-italic fw-bold">REPAIR</h5>
-                    <p class="card-text">Body part sales import and export paragraph</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-            <div class="card">
-                <img src="images/ev2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title fs-1 fst-italic fw-bold">SALES</h5>
-                <p class="card-text">Body repair service</p>
-                </div>
-            </div>
-            </div>
-            <div class="col">
-            <div class="card">
-                <img src="images/electric.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">OTHER</h5>
-                <p class="card-text">Other services</p>
-                </div>
-            </div>
+        <div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <input type="text" id="service-search" class="form-control form-control-lg shadow-sm" placeholder="🔍 Search for EV services (e.g. Repair, Sales)...">
+        </div>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4" id="services-container">
+    <div class="col service-card">
+        <div class="card h-100 shadow-sm">
+            <img src="images/ev1.jpg" class="card-img-top" alt="Charger">
+            <div class="card-body">
+                <h5 class="card-title fs-4 fst-italic fw-bold">CHARGER</h5>
+                <p class="card-text">Professional home and commercial EV charger installation.</p>
+                <button class="btn btn-primary btn-sm mt-2" onclick="bookService('Charger Installation')">Book Now</button>
             </div>
         </div>
+    </div>
+    <div class="col service-card">
+        <div class="card h-100 shadow-sm">
+            <img src="images/ev3.jpg" class="card-img-top" alt="Repair">
+            <div class="card-body">
+                <h5 class="card-title fs-4 fst-italic fw-bold">REPAIR</h5>
+                <p class="card-text">Specialized diagnostic and repair for all EV battery systems.</p>
+                <button class="btn btn-primary btn-sm mt-2" onclick="bookService('Battery Repair')">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="col service-card">
+        <div class="card h-100 shadow-sm">
+            <img src="images/ev2.jpg" class="card-img-top" alt="Sales">
+            <div class="card-body">
+                <h5 class="card-title fs-4 fst-italic fw-bold">SALES</h5>
+                <p class="card-text">Importing high-quality OEM spare parts for electric vehicles.</p>
+                <button class="btn btn-primary btn-sm mt-2" onclick="bookService('Spare Parts')">Inquire Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="col service-card">
+        <div class="card h-100 shadow-sm">
+            <img src="images/electric.jpg" class="card-img-top" alt="Other">
+            <div class="card-body">
+                <h5 class="card-title fs-4 fst-italic fw-bold">OTHER</h5>
+                <p class="card-text">Custom EV modifications and software updates.</p>
+                <button class="btn btn-primary btn-sm mt-2" onclick="bookService('Custom Service')">Learn More</button>
+            </div>
+        </div>
+    </div>
+</div>
         <footer>
             <div></div>
         </footer>
