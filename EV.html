@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>EV CARE</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,7 +23,7 @@
                 <ul class="navbar-nav mb-lg-0 justify-content-center text-light ">
                     <li class="nav-item me-5">
                         <a class="nav-link active text-light" aria-current="page" href="#">HOME</a>
-                    </li>
+                    </li >
                     <li class="nav-item me-5">
                         <a class="nav-link text-light" href="#">PRODUCTS</a>
                     </li>
@@ -33,8 +33,13 @@
                     <li class="nav-item me-5">
                         <a class="nav-link text-light" href="#">CONTACT</a>
                     </li>
-                    <li class="nav-item me-5 ">
-                        <a class="nav-link text-light" href="#" onclick="loginSample()">LOGIN</a>
+                    <!-- Updated Auth Link to change dynamically based on login state -->
+                    <li class="nav-item me-5">
+                        <a class="nav-link text-light fw-bold" href="#" id="auth-nav-link" onclick="handleAuthClick()">LOGIN</a>
+                    </li>
+                    <!-- Dynamic Tracker Link (Hidden until logged in) -->
+                    <li class="nav-item me-5 d-none" id="tracker-nav-item">
+                        <a class="nav-link text-info fw-bold" href="#" data-bs-toggle="offcanvas" data-bs-target="#bookingTracker" aria-controls="bookingTracker">📋 MY TRACKER</a>
                     </li>
                 </ul>
             </div>
@@ -54,11 +59,13 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Fixed targets from #carouselIndicators to #carouselCaptions -->
         <div id="carouselCaptions" class="carousel slide my-5  rounded" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -148,7 +155,22 @@
         </footer>
     </main>
 </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- BOOTSTRAP OFFCANVAS COMPONENT (Booking Tracker) -->
+<div class="offcanvas offcanvas-end bg-dark text-light" tabindex="-1" id="bookingTracker" aria-labelledby="bookingTrackerLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+        <h5 class="offcanvas-title" id="bookingTrackerLabel">📋 Your EV Appointments</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-canvas="offcanvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <p class="text-muted small">Track the live approval progress of your service requests here.</p>
+        <div id="tracker-container">
+            <!-- Dynamic bookings appear here -->
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="js/main.js"></script>
